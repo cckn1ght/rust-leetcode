@@ -1,0 +1,35 @@
+name: rust-leetcode
+version: "0.1.0"
+author: Qunhao S. <qunhaosong@gmail.com>
+about: use rust to solve leetcode problems
+subcommands:
+  - setup:
+      about: setup rust-leetcode, this will create a folder for your project
+      version: "0.1"
+      author: Qunhao S. <qunhaosong@gmail.com>
+      args:
+        - PROJECT_NAME:
+            long: project-name
+            takes_value: true
+            required: false
+            help: the folder name of your rust-leetcode solution project, By default it's called leetcode-rust
+  - random:
+      about: randomlly selects a problem to solve
+      version: "0.1"
+      author: Qunhao S. <qunhaosong@gmail.com>
+      args:
+        - difficulty:
+            short: d
+            long: difficulty
+            takes_value: true
+            required: false
+            help: difficultly of the problem, can be either 'easy'、'medium' or 'hard', if ignored, random difficulty will be chosen.
+  - solve:
+      about: select a specific problem to solve
+      version: "0.1"
+      author: Qunhao S. <qunhaosong@gmail.com>
+      args:
+        - INPUT:
+            required: true
+            index: 1
+            help: Sets the problem number to solve
